@@ -1,0 +1,26 @@
+{
+  "name": "canvas-animations",
+  "version": "1.0.0",
+  "description": "Canvas animations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:naderchehab/canvas-animations.git"
+  },
+  "keywords": [
+    "canvas",
+    "animations"
+  ],
+  "author": "Nader Chehab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naderchehab/canvas-animations/issues"
+  },
+  "homepage": "https://github.com/naderchehab/canvas-animations",
+  "dependencies": {
+    "express": "^4.12.0"
+  }
+}
