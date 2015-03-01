@@ -6,7 +6,8 @@ function init() {
     var canvas = new Canvas();
     var width = canvas.width;
     var height = canvas.height;
-    var speed = 4;
+    var speed = 10;
+    var w = width/3.3 + (height/2-height/8)/2.5;
 
     var objects = [
 
@@ -24,15 +25,15 @@ function init() {
         canvas.createArc(width/3.3, height/2-height/8, height/8, Math.PI*1.5, Math.PI*2.5, speed),
 
         // E
-        canvas.createLine(width/2.5, height/2, width/2.5, height/4, speed),
-        canvas.createLine(width/2.5, height/4, width/2.2, height/4, speed),
-        canvas.createLine(width/2.5, height/3, width/2.2, height/3, speed),
-        canvas.createLine(width/2.5, height/2, width/2.2, height/2, speed),
+        canvas.createLine(w, height/2, w, height/4, speed),
+        canvas.createLine(w, height/4, w+width/20, height/4, speed),
+        canvas.createLine(w, height/3, w+width/20, height/3, speed),
+        canvas.createLine(w, height/2, w+width/20, height/2, speed),
 
         // R
-        canvas.createLine(width/2.1, height/2, width/2.1, height/4, speed),
-        canvas.createArc(width/2.1, height/2-height/5, height/20, Math.PI*1.5, Math.PI*2.5, speed),
-        canvas.createLine(width/2.1, height/2.9, width/1.9, height/2, speed)
+        canvas.createLine(w+width/15, height/2, w+width/15, height/4, speed),
+        canvas.createArc(w+width/15, height/2-height/5, height/20, Math.PI*1.5, Math.PI*2.5, speed),
+        canvas.createLine(w+width/15, height/2.9, w+width/9, height/2, speed)
     ];
 
     canvas.animateSequential(objects);

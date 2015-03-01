@@ -32,12 +32,12 @@ Line.prototype.animate = function() {
 
     if (this.startX === this.endX) {
         x = this.startX;
-        y = this.endY > this.startY ? this.counter : this.startY - this.counter;
+        y = this.endY > this.startY ? Math.min(this.endY, this.startY + this.counter) : Math.max(this.endY, this.startY - this.counter);
     }
     else {
         a = (this.endY - this.startY)/(this.endX - this.startX);
         b = this.startY - a * this.startX;
-        x = Math.min(this.endX, this.endX > this.startX ?  this.startX + this.counter : this.startX - this.counter);
+        x = this.endX > this.startX ?  Math.min(this.endX, this.startX + this.counter) : Math.max(this.endX, this.startX - this.counter);
         y = a*x + b;
     }
 
